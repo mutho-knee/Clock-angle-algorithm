@@ -8,6 +8,9 @@ elif min > 60:
 else:
     print("you've entered the time",hour,":",min)
 # Calculating the difference between the hour hand and minute hand
-angle = (((min/60) + hour) * 30) - (min/60 * 360)
-print("The angle difference between the hour hand and minute hand is", angle)
+angle = abs((((min/60) + hour) * 30) - (min/60 * 360))
+if angle == 360:
+    print("The angle difference between the hour hand and minute hand is 0.0")
+else:
+    print("The angle difference between the hour hand and minute hand is", angle)
 
